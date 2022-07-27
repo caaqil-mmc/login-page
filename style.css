@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@300;400;500;700;900&display=swap");
+:root {
+  --primary-color: #6873ff;
+  --secondary-color: #344054;
+  --action1-color: #d0d5dd;
+  --action2-color: #667085;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color:#fff
+}
+a{
+  text-decoration: none;
+  color:var(--primary-color)
+}
+.dev_flex{
+  display:flex;
+}
+
+#loginPage{
+  height: 100vh;
+  overflow: hidden;
+}
+.container{
+  padding:20px;
+}
+.container .right{
+  flex: 1;
+  background-image: url(/Images/side\ image.svg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+}
+.container .left{
+  flex: 1;
+  height: calc(100vh - 40px);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .left .logo{
+  align-items: center;
+  gap: .5rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.container .left .middle{
+  justify-content: center;
+}
+.container .left .middle .inner{
+  min-width: 300px;
+}
+.container .left .middle .content{
+  margin-bottom: 2.5rem;
+}
+.container .left .middle .content h1{
+  color:var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.container .left .middle .content p{
+  color:var(--action2-color)
+}
+input[type=email], input[type=password]{
+  width: 100%;
+  margin: 5px 0 20px 0;
+  padding:15px;
+  border-radius: 8px;
+  border: 1px solid var(--action1-color);
+}
+input:focus{
+  border:solid var(--primary-color) 1px;
+  outline: none!important;
+}
+.formGroupBottom{
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.btn{
+  width: 100%;
+  padding:20px;
+  border: none;
+  background-color: var(--primary-color);
+  color:#fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.btn:hover{
+  opacity: .9;
+}
+.container .left .bottomAction{
+  margin-top:2rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width:992px){
+  .container .right, .channel{
+    display: none;
+  }
+  .container .left{
+    justify-content: center;
+    align-items: center;
+  }
+  .container .left .logo{
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+}
